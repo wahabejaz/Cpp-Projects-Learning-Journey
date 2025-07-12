@@ -59,8 +59,10 @@ int main()
     cout <<" |   4. (/)Divide      |\n";
     cout <<" |   5. Exit           |\n";
     cout <<" -----------------------\n";
-    cout <<" Enter your choice: ";
+    do{
+    cout <<"Enter your choice: ";
     cin >> ch;
+    }while(!validInput());
     cout << endl;
 
     switch(ch)
