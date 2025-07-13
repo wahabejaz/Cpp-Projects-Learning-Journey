@@ -1,6 +1,11 @@
-# Ignore Compiled Files
+# Ignore all compiled files
 *.exe
 *.o
 *.out
+
+# Ignore temp/editor files
 *.log
+*.txt
 *.tmp
+*.swp
+.DS_Store
