@@ -18,7 +18,7 @@ release/
 *.swp
 .DS_Store
 
-# This file is used to ignore files which are generated
+# This file is used to ignore files which are generated during qt GUI phase
 # ----------------------------------------------------------------------------
 
 *~
