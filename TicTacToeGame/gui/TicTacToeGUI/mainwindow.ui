@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f7f7f7;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="TITLE">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>15</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>TIC-TAC-TOE </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>60</y>
+      <width>321</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="2">
+        <widget class="QPushButton" name="btn9">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btn8">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="btn6">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btn3">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btn7">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="btn4">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btn5">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn1">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelStatus">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>                          Player X's turn</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnReset">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border: 2px solid #2980b9;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #dff9fb;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Reset Game</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
