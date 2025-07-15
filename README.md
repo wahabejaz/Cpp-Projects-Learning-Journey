@@ -7,7 +7,7 @@ Simple arithmetic calculator with input validation. [View Folder](./Calculator)
 ## Level 2 – Student Management System
 Console-based CRUD with structs and file I/O. [View Folder](./Student%20Management%20System/)
 ## Level 3 – Tic-Tac-Toe Game
-- CLI Version: C++ terminal-based[view folder](./TicTacToeGame/)
+- CLI Version: C++ terminal-based[view folder](./Tic%20Tac%20Toe%20Game/)
 - GUI Version: Qt Widgets with button grid, label, reset, and styled UI [View GUI](./Tic%20Tac%20Toe%20Game/gui/)
 
 ## Task Completed
@@ -26,7 +26,7 @@ Console-based CRUD with structs and file I/O. [View Folder](./Student%20Manageme
 - Professional documentation
 
 ## Video Demo
-[Watch My LinkedIn Video Walkthrough Here](#)  
+[Will Add soon.](#)  
 
 ## Connect
 -  [LinkedIn](https://www.linkedin.com/in/wahab-ejaz-025821283/)
