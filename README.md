@@ -1,5 +1,14 @@
 # Codveda-Internship-Cpp
 This repository contains the projects I completed during my internship at **Codveda Technology** in the C/C++ Development domain.
+This repo contains 3 internship projects completed for **Codveda Technology**.
+
+## Level 1 – Calculator
+Simple arithmetic calculator with input validation. [View Folder](./Calculator)
+## Level 2 – Student Management System
+Console-based CRUD with structs and file I/O. [View Folder](./StudentManagementSystem)
+## Level 3 – Tic-Tac-Toe Game
+- CLI Version: C++ terminal-based
+- GUI Version: Qt Widgets with button grid, label, reset, and styled UI [View GUI](./TicTacToeGame/gui)
 
 ## Task Completed
 | Level |      Task                 | Folder                                               |
