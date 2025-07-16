@@ -1,3 +1,8 @@
+//Student Management System
+//The program manage student records, including adding, deleting,and displaying student information
+//Programmer Name: Wahab Ejaz
+//Compiler: gcc
+//Date: 13-Jul-2025
 #include <iostream>
 #include <fstream>
 #include <string>
