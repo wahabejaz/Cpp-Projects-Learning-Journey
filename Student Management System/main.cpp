@@ -219,7 +219,7 @@ int main() {
             cout << "\nThank you for using the Student Management System.\n";
             break;
         default:
-            cout << "❌ Invalid choice. Please try again.\n";
+            cout << "Invalid choice. Please try again.\n";
         }
     } while (choice != 5);
 
