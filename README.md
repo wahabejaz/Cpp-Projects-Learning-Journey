@@ -40,7 +40,7 @@ A menu-driven CRUD system using structs and file I/O for student records.
 ---
 
 ## Demo Video
-[Will add soon.](#)  
+[Click here](https://www.linkedin.com/posts/wahab-ejaz-025821283_when-i-first-started-learning-c-in-university-activity-7355614533140250624-oSYr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAET_uN0BcIvAcZWxWDuCqYgZxpVojNFCYHw)  
 
 ---
 
