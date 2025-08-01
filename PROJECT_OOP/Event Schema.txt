@@ -1,0 +1,8 @@
+count   (int).
+id    (int).
+name  (char[50]).
+Date [dd,mm,yy](int,int,int).
+location (char [50]).
+timing (char[70]).
+capacity (int).
+Price (int).

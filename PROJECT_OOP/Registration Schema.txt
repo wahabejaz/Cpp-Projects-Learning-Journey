@@ -1,0 +1,6 @@
+counter   (int).
+Event Id (int)
+id    (int).
+name  (char[50]).
+Gmail (char [60]).
+phone No (char[20]).

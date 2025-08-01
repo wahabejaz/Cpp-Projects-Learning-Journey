@@ -1,0 +1,283 @@
+a. In public inheritance, how we can access the publicly declared overridden members of the derived and base class directly in the main() function? Give an example.
+
+In public inheritance, members of the base class that are public can be accessed directly in the main() function by using an object of the derived class. The derived class can also override the base class members.
+
+Here’s an example:
+
+cpp
+Copy code
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    void show() { cout << "Base class show function\n"; }
+};
+
+class Derived : public Base {
+public:
+    void show() { cout << "Derived class show function\n"; }
+};
+
+int main() {
+    Derived obj;
+    obj.show();  // Calls the Derived class show()
+    obj.Base::show();  // Calls the Base class show() directly
+    return 0;
+}
+b. In C++, exception handling is implemented using try, throw, and catch blocks.
+
+The correct block to complete the sentence is catch.
+
+c. What is the use of static data members in the class?
+
+Static data members are shared among all objects of a class. They are not tied to any particular object but belong to the class itself. They can be used to store data that is common to all instances of the class.
+
+d. How we can make a class abstract?
+
+A class can be made abstract by declaring at least one pure virtual function in the class. A pure virtual function is defined by assigning = 0 to its declaration.
+
+cpp
+Copy code
+class AbstractClass {
+public:
+    virtual void display() = 0;  // Pure virtual function
+};
+e. Prototype of Copy constructor of AirTime class is given:
+
+cpp
+Copy code
+AirTime(AirTime T);
+What sort of error will be generated and why?
+
+The error here is that the copy constructor is incorrectly declared. The parameter should be passed by reference, not by value, to avoid an infinite recursion. The correct declaration is:
+
+cpp
+Copy code
+AirTime(const AirTime &T);
+f. Why we have to keep destructor virtual of a virtually declared class?
+
+If a class has a virtual function and the class is inherited, we need to declare the destructor as virtual to ensure that the derived class's destructor is called when an object is deleted through a pointer to the base class. This prevents memory leaks.
+
+g. What do we mean by Early and Late binding?
+
+Early Binding (Static Binding): Occurs at compile time. Function calls are resolved based on the type of the pointer or reference at compile time.
+Late Binding (Dynamic Binding): Occurs at runtime. Function calls are resolved based on the actual object type, allowing for polymorphism. This is typically done using virtual functions.
+h. Write required statements for: Move the put pointer at the start of second last object of AirTime in a binary file titled “Time.DAT”.
+
+cpp
+Copy code
+#include <fstream>
+fstream file("Time.DAT", ios::in | ios::binary);
+file.seekg(-2 * sizeof(AirTime), ios::end);  // Move to second last object
+i. What are the advantages if a function returns by reference?
+
+It avoids making a copy of the returned object, which can be more efficient, especially for large objects.
+It allows the caller to modify the object returned, if required.
+j. This pointer contains what?
+
+The this pointer is an implicit pointer that points to the current object of the class. It holds the address of the object for which a member function is being invoked.
+
+k. What is the difference between overriding and overloading a member function of a base class in a derived class?
+
+Overloading: It occurs when two or more functions with the same name but different parameters (number or type) exist within the same scope.
+Overriding: It occurs when a derived class provides a specific implementation of a function that is already defined in the base class.
+l. Suppose that class-three is derived from class-two and class-two is derived from class-one and that each class has instance variables. Suppose that an object of class-three enters its scope, so the constructors of these classes will execute. Determine the order in which the constructors of these classes will execute.
+
+The order of constructor execution will be:
+
+Constructor of class-one (base class of class-two)
+Constructor of class-two (base class of class-three)
+Constructor of class-three (derived class)
+This order ensures that the base class parts of the object are initialized first before the derived class.
+
+
+
+
+
+
+
+You said:
+Write program segments for: 30 Min: (6+6=12)
+a. Read a source file name from the user (e.g, myprog.cpp) and produce a copy of the same. Also
+display the following statistics:
+1. Number of lines of the code.
+2. Total characters.
+ChatGPT said:
+ChatGPT
+Here’s a program segment in C++ that reads a source file name from the user, produces a copy of the file, and displays statistics such as the number of lines and the total number of characters:
+
+cpp
+Copy code
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    string sourceFileName, destFileName;
+    cout << "Enter the source file name (e.g., myprog.cpp): ";
+    cin >> sourceFileName;
+
+    // Open the source file
+    ifstream sourceFile(sourceFileName);
+    if (!sourceFile) {
+        cerr << "Error opening source file!" << endl;
+        return 1;
+    }
+
+    // Creating the destination file name by appending "_copy" to the source file name
+    destFileName = sourceFileName + "_copy";
+    ofstream destFile(destFileName);
+    if (!destFile) {
+        cerr << "Error creating destination file!" << endl;
+        return 1;
+    }
+
+    string line;
+    int lineCount = 0;
+    int charCount = 0;
+
+    // Copy contents from source to destination and calculate statistics
+    while (getline(sourceFile, line)) {
+        destFile << line << endl; // Copy the line to the destination file
+        lineCount++;              // Increment line count
+        charCount += line.length(); // Add the number of characters in the current line
+    }
+
+    // Close the files
+    sourceFile.close();
+    destFile.close();
+
+    // Display statistics
+    cout << "File copy completed!" << endl;
+    cout << "Number of lines in the file: " << lineCount << endl;
+    cout << "Total characters in the file: " << charCount << endl;
+
+    return 0;
+}
+Explanation:
+Input File Name: The program asks the user to input the source file name.
+File Operations:
+The source file is opened in read mode (ifstream).
+A new file is created with the same name, but with the suffix _copy appended (ofstream).
+Statistics:
+As the program reads each line from the source file, it copies that line to the destination file.
+It counts the lines and the characters in each line to calculate the statistics.
+Output: After the copy is done, the program displays the total number of lines and characters.
+Example of Input and Output:
+bash
+Copy code
+Enter the source file name (e.g., myprog.cpp): myprog.cpp
+File copy completed!
+Number of lines in the file: 100
+Total characters in the file: 2565
+
+
+
+
+
+You said:
+. class myString
+{ string str;
+ public:
+……………
+myString (const myString&);
+myString operator – (const myString&);
+…………… };
+int main()
+{
+myString s1,s2,s3,s4;
+……………
+myString s2(s1);
+s4 = s3 – s2;
+}
+Write down the implementation of the copy constructor and “ – “ operator overloaded function. 
+ChatGPT said:
+ChatGPT
+Here's the implementation of the copy constructor and the operator- function for the myString class:
+
+Code Implementation:
+cpp
+Copy code
+#include <iostream>
+#include <string>
+using namespace std;
+
+class myString {
+    string str;  // To store the string
+
+public:
+    // Default constructor
+    myString() : str("") {}
+
+    // Copy constructor
+    myString(const myString &other) {
+        str = other.str;  // Copy the string from the other object
+    }
+
+    // Overloading the 'operator-'
+    myString operator-(const myString &other) {
+        myString temp;
+        size_t pos = str.find(other.str);  // Find the substring to remove
+        if (pos != string::npos) {
+            // Remove the substring from the original string
+            temp.str = str.substr(0, pos) + str.substr(pos + other.str.length());
+        } else {
+            temp.str = str;  // If substring not found, return the original string
+        }
+        return temp;
+    }
+
+    // Function to set the string value (for testing)
+    void setString(const string &s) {
+        str = s;
+    }
+
+    // Function to display the string value
+    void display() const {
+        cout << "String: " << str << endl;
+    }
+};
+
+int main() {
+    myString s1, s2, s3, s4;
+    
+    // Setting some test string values
+    s1.setString("Hello, World!");
+    s2.setString("World");
+    s3.setString("C++ Programming");
+
+    // Using the copy constructor
+    myString s2_copy(s1);
+
+    // Using the overloaded '-' operator to remove "World" from s3
+    s4 = s3 - s2;
+
+    // Display results
+    s2_copy.display();  // Should display: Hello, World!
+    s4.display();       // Should display: C++ Programming
+
+    return 0;
+}
+Explanation:
+Copy Constructor:
+
+The copy constructor myString(const myString &other) initializes the str member of the current object (this) to be the same as the str member of the other object. This makes a copy of the string from the other object to the new one.
+Overloaded operator-:
+
+The operator- function removes the substring (contained in other.str) from the original string (str).
+It uses find() to locate the first occurrence of the substring to be removed. If the substring is found, it creates a new string that concatenates the part before the substring and the part after it.
+If the substring is not found, the original string is returned unchanged.
+Example Output:
+bash
+Copy code
+String: Hello, World!
+String: C++ Programming
+Here, s4 displays "C++ Programming" after removing "World" from "C++ Programming", and s2_copy shows "Hello, World!" as a result of the copy constructor.
+
+
+
+
+
+
